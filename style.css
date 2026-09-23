@@ -61,7 +61,7 @@ a { text-decoration: none; }
 
 /* ── HEADER ── */
 header {
-  padding: 16px 0;
+  padding: 10px 0;
   border-bottom: 1px solid var(--card-border);
   background: rgba(240, 244, 248, 0.92);
   backdrop-filter: blur(20px);
@@ -146,7 +146,7 @@ nav {
 .intro-strip {
   background: linear-gradient(160deg, #FAFCFF 0%, #EFF4FA 60%, #E6EFF8 100%);
   border-bottom: 1px solid var(--card-border);
-  padding: 48px 0 44px;
+  padding: 16px 0 14px;
   position: relative;
   overflow: hidden;
 }
@@ -166,33 +166,29 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 24px;
 }
 
 .intro-eyebrow {
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--primary-dark);
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .intro-name {
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 800;
-  letter-spacing: -1px;
-  color: var(--navy);
-  margin-bottom: 12px;
-  line-height: 1.1;
+  display: none;
 }
 
 .intro-sub {
   color: var(--text-muted);
-  font-size: 1rem;
+  font-size: 0.88rem;
   max-width: 500px;
-  line-height: 1.7;
+  line-height: 1.5;
+  margin-top: 2px;
 }
 
 .intro-right {
@@ -203,13 +199,28 @@ nav {
 }
 
 .intro-orbit-wrap {
-  width: 240px;
-  height: 240px;
+  width: 100px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
+
+.intro-orbit-wrap .orbit-ring {
+  width: 90px;
+  height: 90px;
+}
+
+.intro-orbit-wrap .orbit-dot {
+  width: 26px;
+  height: 26px;
+  font-size: 0.75rem;
+}
+
+.intro-orbit-wrap .dot-1 { top: -13px; }
+.intro-orbit-wrap .dot-2 { bottom: -13px; left: -13px; }
+.intro-orbit-wrap .dot-3 { bottom: -13px; right: -13px; }
 
 .btn-linkedin {
   display: inline-flex;
@@ -233,8 +244,8 @@ nav {
   box-shadow: 0 8px 24px rgba(10,102,194,0.38);
 }
 
-/* ── PROJECTS (no extra top padding now) ── */
-.projects { padding-top: 60px; }
+/* ── PROJECTS (tight top padding to fit above fold) ── */
+.projects { padding-top: 28px; padding-bottom: 40px; }
 
 /* ── BUTTONS ── */
 .btn-primary {
@@ -342,8 +353,8 @@ nav {
 .project-card {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: 24px;
-  padding: 36px;
+  border-radius: 20px;
+  padding: 24px;
   position: relative;
   transition: transform var(--transition), box-shadow var(--transition);
   box-shadow: var(--card-shadow);
