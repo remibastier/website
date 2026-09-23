@@ -203,32 +203,60 @@ nav {
 }
 
 .intro-orbit-wrap {
-  width: 56px;
-  height: 56px;
+  width: 58px;
+  height: 58px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  /* extra breathing room so dots don't clip against section borders */
-  padding: 8px;
+  padding: 10px;
   box-sizing: content-box;
 }
 
-.intro-orbit-wrap .orbit-ring {
-  width: 50px;
-  height: 50px;
+.orbit-ring {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(30,42,58,0.22);
+  position: relative;
+  animation: spin 16s linear infinite;
 }
 
-.intro-orbit-wrap .orbit-dot {
-  width: 18px;
-  height: 18px;
-  font-size: 0.6rem;
+.orbit-dot {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1.5px solid var(--card-border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  animation: counterSpin 16s linear infinite;
 }
 
-.intro-orbit-wrap .dot-1 { top: -9px; left: calc(50% - 9px); }
-.intro-orbit-wrap .dot-2 { top: calc(50% - 9px); right: -9px; }
-.intro-orbit-wrap .dot-3 { bottom: -9px; left: calc(50% - 9px); }
-.intro-orbit-wrap .dot-4 { top: calc(50% - 9px); left: -9px; }
+.orbit-dot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.orbit-dot span {
+  font-size: 0.65rem;
+  line-height: 1;
+}
+
+.dot-1 { top: -11px; left: calc(50% - 11px); }
+.dot-2 { top: calc(50% - 11px); right: -11px; }
+.dot-3 { bottom: -11px; left: calc(50% - 11px); }
+.dot-4 { top: calc(50% - 11px); left: -11px; }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes counterSpin { to { transform: rotate(-360deg); } }
 
 .btn-linkedin {
   display: inline-flex;
@@ -291,40 +319,6 @@ nav {
 }
 .btn-ghost:hover { background: rgba(10,102,194,0.06); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(10,102,194,0.15); }
 
-/* ── HERO VISUAL ── */
-.hero-visual {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 320px;
-  animation: fadeSlideUp 0.6s 0.4s ease both;
-}
-
-.orbit-ring {
-  width: 240px; height: 240px;
-  border-radius: 50%;
-  border: 1.5px dashed rgba(30,42,58,0.15);
-  position: relative;
-  animation: spin 18s linear infinite;
-}
-@keyframes spin { to { transform: rotate(360deg); } }
-
-.orbit-dot {
-  position: absolute;
-  width: 44px; height: 44px;
-  border-radius: 50%;
-  background: var(--surface);
-  border: 1px solid var(--card-border);
-  box-shadow: var(--card-shadow);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.3rem;
-  animation: counterSpin 18s linear infinite;
-}
-@keyframes counterSpin { to { transform: rotate(-360deg); } }
-
-.dot-1 { top: -22px; left: 50%; transform: translateX(-50%); }
-.dot-2 { bottom: -22px; left: -22px; }
-.dot-3 { bottom: -22px; right: -22px; }
 
 /* ── SECTION SHARED ── */
 .section-header { text-align: center; margin-bottom: 28px; }
