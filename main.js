@@ -1,58 +1,98 @@
 ﻿/* ── LANGUAGE TOGGLE ── */
-const translations = {
-  en: {
-    'hero-badge':   'Indie Developer',
-    'hero-title':   'Building tools that<br><span class="accent">actually matter</span>',
-    'hero-sub':     "I'm Remi, a developer shipping products at the intersection of language, learning, and technology. Based in Southeast Asia, building for the world.",
-    'cta-projects': 'See my projects',
-    'cta-contact':  'Get in touch',
-    'tf-link-text': 'Visit thaifluent.com',
-  },
-  fr: {
-    'hero-badge':   'Developpeur independant',
-    'hero-title':   'Je construis des outils<br><span class="accent">qui font vraiment sens</span>',
-    'hero-sub':     "Je suis Remi, un developpeur qui cree des produits a l'intersection du langage, de l'apprentissage et de la technologie. Base en Asie du Sud-Est, je cree pour le monde entier.",
-    'cta-projects': 'Voir mes projets',
-    'cta-contact':  'Me contacter',
-    'tf-link-text': 'Visiter thaifluent.com',
-  }
-};
-
 let currentLang = 'en';
 
 function applyLang(lang) {
-  // Update all data-en / data-fr elements
+  // Update all data-en / data-fr text elements
   document.querySelectorAll('[data-en]').forEach(el => {
     const val = el.getAttribute('data-' + lang);
     if (!val) return;
-    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-      el.placeholder = val;
-    } else {
+    if (el.tagName === 'BUTTON' || el.tagName === 'A' || el.tagName === 'P' || el.tagName === 'DIV' || el.tagName === 'SPAN' || el.tagName === 'LI') {
       el.textContent = val;
     }
   });
 
-  // Hero title has HTML — handle separately
+  // Update input/textarea placeholders
+  document.querySelectorAll('[data-en-placeholder]').forEach(el => {
+    const val = el.getAttribute('data-' + lang + '-placeholder');
+    if (val) el.placeholder = val;
+  });
+
+  // Hero title has HTML spans — rebuild manually
   const heroTitle = document.getElementById('hero-title');
   if (heroTitle) {
     heroTitle.innerHTML = lang === 'fr'
-      ? 'Je construis des outils<br><span class="accent">qui font vraiment sens</span>'
-      : 'Building tools that<br><span class="accent">actually matter</span>';
+      ? 'Des produits que<br><span class="accent">les gens adorent</span>'
+      : 'Building products<br><span class="accent">people love to use</span>';
+  }
+
+  // Contact button text
+  const btnText = document.getElementById('contact-btn-text');
+  if (btnText) {
+    btnText.textContent = lang === 'fr' ? 'Envoyer →' : 'Send message →';
+  }
+
+  // LinkedIn CTA in about section
+  const linkedinCta = document.getElementById('about-linkedin');
+  if (linkedinCta) {
+    const span = linkedinCta.querySelector('span');
+    if (span) span.textContent = lang === 'fr' ? 'Voir mon profil complet sur LinkedIn' : 'View my full profile on LinkedIn';
+  }
+
+  // tf link
+  const tfLink = document.getElementById('tf-link');
+  if (tfLink) {
+    const span = tfLink.querySelector('span');
+    if (span) span.textContent = lang === 'fr' ? 'Visiter thaifluent.com' : 'Visit thaifluent.com';
+  }
+
+  // contact btn in hero
+  const ctaLinkedIn = document.getElementById('cta-linkedin');
+  if (ctaLinkedIn) {
+    const span = ctaLinkedIn.querySelector('span');
+    if (span) span.textContent = lang === 'fr' ? 'Voir LinkedIn' : 'View LinkedIn';
+  }
+
+  // contact note
+  const note = document.querySelector('.contact-note');
+  if (note) {
+    note.innerHTML = lang === 'fr'
+      ? 'Ou ecrivez-moi a <a href="mailto:contact@remibastier.com" class="inline-link">contact@remibastier.com</a>'
+      : 'Or email me directly at <a href="mailto:contact@remibastier.com" class="inline-link">contact@remibastier.com</a>';
   }
 
   // Lang toggle labels
   document.getElementById('lang-active').textContent = lang.toUpperCase();
   document.getElementById('lang-other').textContent = lang === 'en' ? 'FR' : 'EN';
 
-  // html lang attr
   document.documentElement.lang = lang;
-
   currentLang = lang;
 }
 
 document.getElementById('lang-toggle').addEventListener('click', () => {
   applyLang(currentLang === 'en' ? 'fr' : 'en');
 });
+
+/* ── CONTACT FORM: honeypot + mailto fallback ── */
+function handleContact(e) {
+  e.preventDefault();
+  const form = e.target;
+  const honeypot = form.querySelector('input[name="_gotcha"]');
+  if (honeypot && honeypot.value) return; // bot caught
+
+  const name = encodeURIComponent(form.querySelector('#cf-name').value);
+  const email = encodeURIComponent(form.querySelector('#cf-email').value);
+  const msg = encodeURIComponent(form.querySelector('#cf-msg').value);
+
+  const subject = encodeURIComponent('Message from ' + decodeURIComponent(name));
+  const body = encodeURIComponent(
+    'Name: ' + decodeURIComponent(name) + '\n' +
+    'Email: ' + decodeURIComponent(email) + '\n\n' +
+    decodeURIComponent(msg)
+  );
+
+  window.location.href = 'mailto:contact@remibastier.com?subject=' + subject + '&body=' + body;
+}
+window.handleContact = handleContact;
 
 /* ── SCROLL REVEAL ── */
 const revealEls = document.querySelectorAll(
@@ -67,24 +107,23 @@ const observer = new IntersectionObserver(entries => {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.1 });
 
 revealEls.forEach(el => observer.observe(el));
 
 /* ── ACTIVE NAV HIGHLIGHT ── */
 const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-link');
+const navLinks = document.querySelectorAll('a.nav-link[href^="#"]');
 
 const navObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       navLinks.forEach(link => {
         link.style.color = link.getAttribute('href') === '#' + entry.target.id
-          ? 'var(--primary)'
-          : '';
+          ? 'var(--primary-dark)' : '';
       });
     }
   });
-}, { threshold: 0.5 });
+}, { threshold: 0.4 });
 
 sections.forEach(s => navObserver.observe(s));

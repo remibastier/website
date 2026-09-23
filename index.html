@@ -4,28 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Remi Bastier — Developer &amp; Builder</title>
-  <meta name="description" content="Remi Bastier — indie developer building ThaiFluent and SAR. Portfolio and projects showcase.">
-  <meta name="keywords" content="Remi Bastier, developer, ThaiFluent, SAR, indie developer, mobile apps">
+  <meta name="description" content="Remi Bastier — developer building ThaiFluent and SAR. Portfolio and projects showcase.">
+  <meta name="keywords" content="Remi Bastier, developer, ThaiFluent, SAR, mobile apps, software engineer">
   <meta name="author" content="Remi Bastier">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#0B0F19">
+  <meta name="theme-color" content="#1A2332">
+  <link rel="icon" href="rb-logo.jpg" type="image/jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- HEADER -->
   <header>
     <div class="container">
       <nav>
         <a href="#" class="brand" id="brand-link">
-          <span class="brand-icon">RB</span>
+          <img src="rb-logo.jpg" alt="Remi Bastier logo" class="brand-img">
           <span>Remi Bastier</span>
         </a>
         <div class="nav-links">
           <a href="#projects" class="nav-link" data-en="Projects" data-fr="Projets">Projects</a>
           <a href="#about" class="nav-link" data-en="About" data-fr="A propos">About</a>
           <a href="#contact" class="nav-link" data-en="Contact" data-fr="Contact">Contact</a>
+          <a href="https://www.linkedin.com/in/remi-bastier" target="_blank" rel="noopener" class="nav-link nav-linkedin" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
           <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
             <span id="lang-active">EN</span>
             <span class="lang-divider">|</span>
@@ -36,23 +43,27 @@
     </div>
   </header>
 
+  <!-- HERO -->
   <section class="hero" id="hero">
     <div class="glow-orb glow-1"></div>
     <div class="glow-orb glow-2"></div>
     <div class="container hero-inner">
       <div class="hero-content">
-        <div class="hero-badge" id="hero-badge" data-en="Indie Developer" data-fr="Developpeur independant">🛠️ Indie Developer</div>
+        <div class="hero-badge" id="hero-badge" data-en="Software Developer & Builder" data-fr="Developpeur logiciel">🚀 Software Developer &amp; Builder</div>
         <h1 class="hero-title" id="hero-title">
-          Building tools that<br><span class="accent">actually matter</span>
+          Building products<br><span class="accent">people love to use</span>
         </h1>
         <p class="hero-sub" id="hero-sub"
-          data-en="I'm Remi, a developer shipping products at the intersection of language, learning, and technology. Based in Southeast Asia, building for the world."
-          data-fr="Je suis Remi, un developpeur qui cree des produits a l'intersection du langage, de l'apprentissage et de la technologie. Base en Asie du Sud-Est, je cree pour le monde entier.">
-          I'm Remi, a developer shipping products at the intersection of language, learning, and technology. Based in Southeast Asia, building for the world.
+          data-en="I'm Remi, a software developer shipping products at the intersection of language, learning, and technology. Based in Southeast Asia, building for the world."
+          data-fr="Je suis Remi, un developpeur logiciel qui cree des produits a l'intersection du langage, de l'apprentissage et de la technologie. Base en Asie du Sud-Est, je cree pour le monde.">
+          I'm Remi, a software developer shipping products at the intersection of language, learning, and technology. Based in Southeast Asia, building for the world.
         </p>
         <div class="hero-cta-group">
           <a href="#projects" class="btn-primary" id="cta-projects" data-en="See my projects" data-fr="Voir mes projets">See my projects</a>
-          <a href="#contact" class="btn-ghost" id="cta-contact" data-en="Get in touch" data-fr="Me contacter">Get in touch</a>
+          <a href="https://www.linkedin.com/in/remi-bastier" target="_blank" rel="noopener" class="btn-ghost" id="cta-linkedin">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <span data-en="View LinkedIn" data-fr="Voir LinkedIn">View LinkedIn</span>
+          </a>
         </div>
       </div>
       <div class="hero-visual">
@@ -61,24 +72,11 @@
           <div class="orbit-dot dot-2"><span>📡</span></div>
           <div class="orbit-dot dot-3"><span>🌐</span></div>
         </div>
-        <div class="floating-card card-a">
-          <span class="fc-icon">⭐</span>
-          <div>
-            <div class="fc-label" data-en="ThaiFluent Rating" data-fr="Note ThaiFluent">ThaiFluent Rating</div>
-            <div class="fc-value">4.9 / 5</div>
-          </div>
-        </div>
-        <div class="floating-card card-b">
-          <span class="fc-icon">📱</span>
-          <div>
-            <div class="fc-label" data-en="Downloads" data-fr="Telechargements">Downloads</div>
-            <div class="fc-value">10,000+</div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
+  <!-- PROJECTS -->
   <section class="projects" id="projects">
     <div class="container">
       <div class="section-header">
@@ -86,9 +84,13 @@
         <h2 class="section-title" data-en="My Projects" data-fr="Mes Projets">My Projects</h2>
       </div>
       <div class="projects-grid">
+
+        <!-- ThaiFluent -->
         <div class="project-card card-thaifluent" id="card-thaifluent">
           <div class="project-status status-live" data-en="Live" data-fr="En ligne">✅ Live</div>
-          <div class="project-icon tf-icon">ภ</div>
+          <div class="project-icon-wrap">
+            <img src="thaifluent-icon.png" alt="ThaiFluent logo" class="project-icon-img">
+          </div>
           <h3 class="project-name">ThaiFluent</h3>
           <p class="project-desc"
             data-en="A mobile app to master conversational Thai — dual-voice audio drills, 5-tone pitch gym, Thai Lego sentence compounding, and 100% offline spaced repetition."
@@ -98,20 +100,18 @@
           <ul class="project-tags">
             <li>Flutter</li><li>Audio SRS</li><li>Thai NLP</li><li>Offline-first</li>
           </ul>
-          <div class="project-meta">
-            <div class="project-stat"><span class="stat-value">4.9★</span><span class="stat-label" data-en="Rating" data-fr="Note">Rating</span></div>
-            <div class="project-stat"><span class="stat-value">10K+</span><span class="stat-label" data-en="Users" data-fr="Utilisateurs">Users</span></div>
-            <div class="project-stat"><span class="stat-value">1,280+</span><span class="stat-label" data-en="Reviews" data-fr="Avis">Reviews</span></div>
-          </div>
           <a href="https://thaifluent.com" target="_blank" rel="noopener" class="project-link" id="tf-link">
             <span data-en="Visit thaifluent.com" data-fr="Visiter thaifluent.com">Visit thaifluent.com</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           </a>
         </div>
 
+        <!-- SAR -->
         <div class="project-card card-sar" id="card-sar">
           <div class="project-status status-wip" data-en="In Progress" data-fr="En cours">🚧 In Progress</div>
-          <div class="project-icon sar-icon">📡</div>
+          <div class="project-icon-wrap">
+            <div class="project-icon sar-icon">📡</div>
+          </div>
           <h3 class="project-name">SAR</h3>
           <p class="project-desc"
             data-en="A new project currently in development. More details coming soon — stay tuned for updates on this exciting work in progress."
@@ -123,54 +123,86 @@
           </ul>
           <div class="sar-teaser" data-en="🔒 Details under wraps — follow along for the reveal." data-fr="🔒 Details sous embargo — suivez-moi pour la revelation.">🔒 Details under wraps — follow along for the reveal.</div>
         </div>
+
       </div>
     </div>
   </section>
 
+  <!-- ABOUT -->
   <section class="about" id="about">
     <div class="container">
       <div class="about-grid">
         <div class="about-text">
           <p class="section-label" data-en="Who I am" data-fr="Qui je suis">Who I am</p>
-          <h2 class="section-title" data-en="About Me" data-fr="A propos">About Me</h2>
-          <p class="about-body" data-en="I'm a developer passionate about building things that solve real problems. I love the full journey — from the first idea all the way to a polished product that people actually use." data-fr="Je suis developpeur, passionne par la creation de choses qui resolvent de vrais problemes. J'aime tout le parcours — de la premiere idee jusqu'a un produit soigne que les gens utilisent vraiment.">
-            I'm a developer passionate about building things that solve real problems. I love the full journey — from the first idea all the way to a polished product that people actually use.
+          <h2 class="section-title" data-en="About Me" data-fr="A propos de moi">About Me</h2>
+          <p class="about-body" id="about-p1"
+            data-en="I'm a software developer passionate about building things that solve real problems. I love the full journey — from the first idea all the way to a polished product that people actually use."
+            data-fr="Je suis developpeur logiciel, passionne par la creation de choses qui resolvent de vrais problemes. J'aime tout le parcours — de la premiere idee jusqu'a un produit soigne que les gens utilisent vraiment.">
+            I'm a software developer passionate about building things that solve real problems. I love the full journey — from the first idea all the way to a polished product that people actually use.
           </p>
-          <p class="about-body" data-en="Living in Southeast Asia fuels my curiosity about languages and culture, which is exactly how ThaiFluent was born. The SAR project is my next chapter." data-fr="Vivre en Asie du Sud-Est nourrit ma curiosite pour les langues et la culture, c'est exactement ainsi que ThaiFluent est ne. Le projet SAR est mon prochain chapitre.">
+          <p class="about-body" id="about-p2"
+            data-en="Living in Southeast Asia fuels my curiosity about languages and culture, which is exactly how ThaiFluent was born. The SAR project is my next chapter."
+            data-fr="Vivre en Asie du Sud-Est nourrit ma curiosite pour les langues et la culture, c'est exactement ainsi que ThaiFluent est ne. Le projet SAR est mon prochain chapitre.">
             Living in Southeast Asia fuels my curiosity about languages and culture, which is exactly how ThaiFluent was born. The SAR project is my next chapter.
           </p>
           <div class="about-pills">
             <span class="pill">Flutter</span><span class="pill">Dart</span><span class="pill">JavaScript</span>
             <span class="pill">Node.js</span><span class="pill">Mobile Dev</span><span class="pill">UX Design</span>
           </div>
+          <a href="https://www.linkedin.com/in/remi-bastier" target="_blank" rel="noopener" class="linkedin-cta" id="about-linkedin">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <span data-en="View my full profile on LinkedIn" data-fr="Voir mon profil complet sur LinkedIn">View my full profile on LinkedIn</span>
+          </a>
         </div>
         <div class="about-stats">
           <div class="stat-card"><span class="stat-num">2</span><span class="stat-desc" data-en="Projects" data-fr="Projets">Projects</span></div>
-          <div class="stat-card"><span class="stat-num">10K+</span><span class="stat-desc" data-en="Users" data-fr="Utilisateurs">Users</span></div>
-          <div class="stat-card"><span class="stat-num">4.9★</span><span class="stat-desc" data-en="Rating" data-fr="Note">Rating</span></div>
+          <div class="stat-card"><span class="stat-num">🌏</span><span class="stat-desc" data-en="SE Asia" data-fr="Asie du Sud-Est">SE Asia</span></div>
+          <div class="stat-card"><span class="stat-num">🇹🇭</span><span class="stat-desc" data-en="Thailand" data-fr="Thaïlande">Thailand</span></div>
           <div class="stat-card"><span class="stat-num">∞</span><span class="stat-desc" data-en="Ideas" data-fr="Idees">Ideas</span></div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="container contact-inner">
       <div class="glow-orb glow-3"></div>
       <p class="section-label" data-en="Let's talk" data-fr="Parlons-en">Let's talk</p>
       <h2 class="section-title" data-en="Get in touch" data-fr="Me contacter">Get in touch</h2>
-      <p class="contact-sub" data-en="Have a project in mind, a collaboration idea, or just want to say hi? I'd love to hear from you." data-fr="Vous avez un projet en tete, une idee de collaboration, ou vous voulez juste dire bonjour ? Je serais ravi d'echanger.">
-        Have a project in mind, a collaboration idea, or just want to say hi? I'd love to hear from you.
+      <p class="contact-sub" data-en="Have a project in mind, a collaboration idea, or just want to say hi?" data-fr="Vous avez un projet en tete, une idee de collaboration, ou vous voulez juste dire bonjour ?">
+        Have a project in mind, a collaboration idea, or just want to say hi?
       </p>
-      <a href="mailto:hello@remibastier.com" class="btn-primary btn-large" id="contact-btn" data-en="Say hello →" data-fr="Dire bonjour →">Say hello →</a>
+      <form class="contact-form" id="contact-form" onsubmit="handleContact(event)">
+        <div class="form-row">
+          <input type="text" id="cf-name" name="name" required autocomplete="name"
+            data-en-placeholder="Your name" data-fr-placeholder="Votre nom"
+            placeholder="Your name">
+          <input type="email" id="cf-email" name="_replyto" required autocomplete="email"
+            data-en-placeholder="Your email" data-fr-placeholder="Votre email"
+            placeholder="Your email">
+        </div>
+        <textarea id="cf-msg" name="message" required rows="4"
+          data-en-placeholder="Tell me what's on your mind..." data-fr-placeholder="Dites-moi ce que vous pensez..."
+          placeholder="Tell me what's on your mind..."></textarea>
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <button type="submit" class="btn-primary btn-large" id="contact-btn">
+          <span id="contact-btn-text" data-en="Send message →" data-fr="Envoyer →">Send message →</span>
+        </button>
+      </form>
+      <p class="contact-note" data-en="Or email me directly at contact@remibastier.com" data-fr="Ou ecrivez-moi a contact@remibastier.com">
+        Or email me directly at <a href="mailto:contact@remibastier.com" class="inline-link">contact@remibastier.com</a>
+      </p>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <div class="container footer-inner">
       <span class="footer-copy">© 2025 Remi Bastier</span>
       <div class="footer-links">
         <a href="https://thaifluent.com" target="_blank" rel="noopener" class="footer-link">ThaiFluent</a>
+        <a href="https://www.linkedin.com/in/remi-bastier" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
         <a href="https://github.com/remibastier" target="_blank" rel="noopener" class="footer-link">GitHub</a>
       </div>
     </div>
