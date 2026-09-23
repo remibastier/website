@@ -6,7 +6,7 @@ function applyLang(lang) {
   document.querySelectorAll('[data-en]').forEach(el => {
     const val = el.getAttribute('data-' + lang);
     if (!val) return;
-    if (el.tagName === 'BUTTON' || el.tagName === 'A' || el.tagName === 'P' || el.tagName === 'DIV' || el.tagName === 'SPAN' || el.tagName === 'LI') {
+    if (['BUTTON', 'A', 'P', 'DIV', 'SPAN', 'LI', 'H1', 'H2', 'H3', 'H4'].includes(el.tagName)) {
       el.textContent = val;
     }
   });
