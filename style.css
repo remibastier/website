@@ -35,6 +35,8 @@ body {
   overflow-x: hidden;
 }
 
+section[id] { scroll-margin-top: 68px; }
+
 a { text-decoration: none; }
 
 /* ── LAYOUT ── */
@@ -223,9 +225,10 @@ nav {
   font-size: 0.6rem;
 }
 
-.intro-orbit-wrap .dot-1 { top: -9px; }
-.intro-orbit-wrap .dot-2 { bottom: -9px; left: -9px; }
-.intro-orbit-wrap .dot-3 { bottom: -9px; right: -9px; }
+.intro-orbit-wrap .dot-1 { top: -9px; left: calc(50% - 9px); }
+.intro-orbit-wrap .dot-2 { top: calc(50% - 9px); right: -9px; }
+.intro-orbit-wrap .dot-3 { bottom: -9px; left: calc(50% - 9px); }
+.intro-orbit-wrap .dot-4 { top: calc(50% - 9px); left: -9px; }
 
 .btn-linkedin {
   display: inline-flex;
@@ -649,20 +652,20 @@ nav {
 
 /* ── FOOTER ── */
 footer {
-  padding: 26px 0;
+  padding: 16px 0;
   border-top: 1px solid var(--card-border);
-  background: #E8EEF4;
+  background: var(--bg);
 }
 .footer-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.footer-copy { color: var(--text-faint); font-size: 0.85rem; }
-.footer-links { display: flex; gap: 20px; }
+.footer-copy { color: var(--text-faint); font-size: 0.82rem; }
+.footer-links { display: flex; gap: 18px; }
 .footer-link {
   color: var(--text-muted);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 500;
   transition: color var(--transition);
 }
