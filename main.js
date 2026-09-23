@@ -1,4 +1,4 @@
-﻿/* ── LANGUAGE TOGGLE ── */
+/* ── LANGUAGE TOGGLE ── */
 let currentLang = 'en';
 
 function applyLang(lang) {
@@ -16,14 +16,6 @@ function applyLang(lang) {
     const val = el.getAttribute('data-' + lang + '-placeholder');
     if (val) el.placeholder = val;
   });
-
-  // Hero title has HTML spans — rebuild manually
-  const heroTitle = document.getElementById('hero-title');
-  if (heroTitle) {
-    heroTitle.innerHTML = lang === 'fr'
-      ? 'Des produits que<br><span class="accent">les gens adorent</span>'
-      : 'Building products<br><span class="accent">people love to use</span>';
-  }
 
   // Contact button text
   const btnText = document.getElementById('contact-btn-text');

@@ -1,8 +1,9 @@
-﻿/* ── RESET & TOKENS ── */
+/* ── RESET & TOKENS ── */
 :root {
   --bg: #F0F4F8;
   --bg-2: #E2E8F0;
   --surface: #FFFFFF;
+
   --card-bg: #FFFFFF;
   --card-border: rgba(0, 0, 0, 0.07);
   --card-shadow: 0 2px 20px rgba(0,0,0,0.07);
@@ -141,67 +142,10 @@ nav {
 #lang-active { color: var(--primary-dark); }
 #lang-other { color: var(--text-faint); }
 
-/* ── HERO ── */
-.hero {
-  padding: 96px 0 80px;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(160deg, #FAFCFF 0%, #F0F4F8 60%, #E8F0F8 100%);
-}
-
-.hero-inner {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 64px;
-  align-items: center;
-}
-
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--primary-dim);
-  border: 1px solid rgba(245, 158, 11, 0.25);
-  color: var(--primary-dark);
-  padding: 6px 16px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  margin-bottom: 24px;
-  animation: fadeSlideUp 0.6s ease both;
-}
-
-.hero-title {
-  font-size: clamp(2.4rem, 5vw, 3.8rem);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -1.5px;
-  color: var(--navy);
-  margin-bottom: 24px;
-  animation: fadeSlideUp 0.6s 0.1s ease both;
-}
-
-.accent {
-  background: linear-gradient(90deg, var(--primary), var(--cyan));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.hero-sub {
-  color: var(--text-muted);
-  font-size: 1.05rem;
-  max-width: 520px;
-  margin-bottom: 36px;
-  animation: fadeSlideUp 0.6s 0.2s ease both;
-}
-
-.hero-cta-group {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  animation: fadeSlideUp 0.6s 0.3s ease both;
+/* ── PROJECTS (first section) ── */
+.projects-first {
+  border-top: none;
+  padding-top: 56px;
 }
 
 /* ── BUTTONS ── */
