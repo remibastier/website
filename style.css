@@ -497,6 +497,10 @@ nav {
   align-items: center;
 }
 
+.about-text .section-title {
+  margin-bottom: 14px;
+}
+
 .about-body {
   color: var(--text-muted);
   margin-bottom: 16px;
