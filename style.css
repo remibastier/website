@@ -146,9 +146,10 @@ nav {
 .intro-strip {
   background: linear-gradient(160deg, #FAFCFF 0%, #EFF4FA 60%, #E6EFF8 100%);
   border-bottom: 1px solid var(--card-border);
-  padding: 16px 0 14px;
+  padding: 20px 0 18px;
   position: relative;
-  overflow: hidden;
+  /* no overflow:hidden so orbit dots aren't clipped at top/bottom */
+  overflow: visible;
 }
 
 .intro-glow {
@@ -158,6 +159,7 @@ nav {
   filter: blur(90px);
   pointer-events: none;
   z-index: 0;
+  pointer-events: none;
 }
 .intro-glow-1 { top: -120px; left: -80px;  background: rgba(245,158,11,0.15); }
 .intro-glow-2 { top: -60px;  right: -100px; background: rgba(8,145,178,0.10); }
@@ -199,28 +201,31 @@ nav {
 }
 
 .intro-orbit-wrap {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  /* extra breathing room so dots don't clip against section borders */
+  padding: 14px;
+  box-sizing: content-box;
 }
 
 .intro-orbit-wrap .orbit-ring {
-  width: 90px;
-  height: 90px;
+  width: 72px;
+  height: 72px;
 }
 
 .intro-orbit-wrap .orbit-dot {
-  width: 26px;
-  height: 26px;
-  font-size: 0.75rem;
+  width: 22px;
+  height: 22px;
+  font-size: 0.68rem;
 }
 
-.intro-orbit-wrap .dot-1 { top: -13px; }
-.intro-orbit-wrap .dot-2 { bottom: -13px; left: -13px; }
-.intro-orbit-wrap .dot-3 { bottom: -13px; right: -13px; }
+.intro-orbit-wrap .dot-1 { top: -11px; }
+.intro-orbit-wrap .dot-2 { bottom: -11px; left: -11px; }
+.intro-orbit-wrap .dot-3 { bottom: -11px; right: -11px; }
 
 .btn-linkedin {
   display: inline-flex;
@@ -339,7 +344,7 @@ nav {
 
 /* ── PROJECTS ── */
 .projects {
-  padding: 100px 0;
+  padding: 40px 0 48px;
   border-top: 1px solid var(--card-border);
   background: var(--bg);
 }
@@ -451,7 +456,7 @@ nav {
 
 /* ── ABOUT ── */
 .about {
-  padding: 100px 0;
+  padding: 52px 0;
   border-top: 1px solid var(--card-border);
   background: linear-gradient(180deg, #F8FAFB, var(--bg));
 }
@@ -538,7 +543,7 @@ nav {
 
 /* ── CONTACT ── */
 .contact {
-  padding: 100px 0;
+  padding: 52px 0;
   border-top: 1px solid var(--card-border);
   background: var(--bg);
   text-align: center;

@@ -119,3 +119,8 @@ const navObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.4 });
 
 sections.forEach(s => navObserver.observe(s));
+
+/* ── DYNAMIC COPYRIGHT YEAR ── */
+const yearEl = document.getElementById('footer-year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
