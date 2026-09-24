@@ -715,7 +715,7 @@ footer {
 .footer-copy { color: var(--text-faint); font-size: 0.82rem; }
 .footer-links {
   display: flex;
-  gap: 18px;
+  gap: 16px;
   align-items: center;
 }
 .footer-link,
@@ -725,7 +725,8 @@ footer {
   font-weight: 500;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
+  width: 105px;
   text-decoration: none;
   transition: color var(--transition);
 }
