@@ -44,6 +44,13 @@ function applyLang(lang) {
     if (span) span.textContent = lang === 'fr' ? 'Visiter sar.remibastier.com' : 'Visit sar.remibastier.com';
   }
 
+  // victory link
+  const victoryLink = document.getElementById('victory-link');
+  if (victoryLink) {
+    const span = victoryLink.querySelector('span');
+    if (span) span.textContent = lang === 'fr' ? 'Télécharger Victory APK' : 'Download Victory APK';
+  }
+
   // contact btn in hero
   const ctaLinkedIn = document.getElementById('cta-linkedin');
   if (ctaLinkedIn) {
