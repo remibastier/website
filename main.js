@@ -37,6 +37,13 @@ function applyLang(lang) {
     if (span) span.textContent = lang === 'fr' ? 'Visiter thaifluent.com' : 'Visit thaifluent.com';
   }
 
+  // sar link
+  const sarLink = document.getElementById('sar-link');
+  if (sarLink) {
+    const span = sarLink.querySelector('span');
+    if (span) span.textContent = lang === 'fr' ? 'Visiter sar.remibastier.com' : 'Visit sar.remibastier.com';
+  }
+
   // contact btn in hero
   const ctaLinkedIn = document.getElementById('cta-linkedin');
   if (ctaLinkedIn) {
