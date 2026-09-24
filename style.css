@@ -37,7 +37,8 @@ body {
 
 section[id] { scroll-margin-top: 68px; }
 
-a { text-decoration: none; }
+a { text-decoration: none; color: inherit; }
+a:visited { color: inherit; }
 
 /* ── LAYOUT ── */
 .container {
@@ -452,17 +453,47 @@ nav {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: var(--primary-dark);
+  color: #B45309;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 700;
   font-size: 0.78rem;
-  border: 1.2px solid rgba(245,158,11,0.4);
+  line-height: 1.4;
+  border: 1.2px solid rgba(217, 119, 6, 0.4);
   padding: 5px 12px;
   border-radius: 8px;
-  background: var(--primary-dim);
+  background: rgba(245, 158, 11, 0.12);
   width: fit-content;
+  text-decoration: none;
   transition: background var(--transition), gap var(--transition), box-shadow var(--transition);
 }
-.project-link:hover { background: rgba(245,158,11,0.2); gap: 9px; box-shadow: 0 3px 10px rgba(245,158,11,0.2); }
+
+.project-link:visited {
+  color: #B45309;
+}
+
+.project-link:hover {
+  color: #92400E;
+  background: rgba(245, 158, 11, 0.22);
+  gap: 9px;
+  box-shadow: 0 3px 10px rgba(245, 158, 11, 0.2);
+}
+
+.project-link:active,
+.project-link:focus {
+  color: #B45309;
+}
+
+.project-link span {
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.project-link svg {
+  flex-shrink: 0;
+  stroke: currentColor;
+}
 
 .sar-teaser {
   padding: 5px 10px;
